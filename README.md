@@ -27,4 +27,5 @@ Implement a Touché Coulé from scratch in Solidity. The game is running into a 
 - Switch the account to play as a new player.
 - In each turn, we fire at a random address. 
 
+The picture below shows the interface of two players after they have registered 2 ships each.
 ![image](https://cdn.discordapp.com/attachments/1023913190532333668/1046469225126035486/image.png)
