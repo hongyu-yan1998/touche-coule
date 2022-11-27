@@ -20,9 +20,13 @@ contract Battleship is Ship {
     }
 
     function fire() public override returns (uint, uint) {
-        uint _x = uint(keccak256(abi.encodePacked(block.timestamp, block.difficulty, msg.sender))) % widthGame;
-        uint _y = uint(keccak256(abi.encodePacked(block.timestamp, block.difficulty, msg.sender))) % heightGame;
-        return(_x, _y);
+        uint x_ = uint(keccak256(abi.encodePacked(block.timestamp, block.difficulty, msg.sender))) % widthGame;
+        uint y_ = uint(keccak256(abi.encodePacked(block.timestamp, block.difficulty, msg.sender))) % heightGame;
+        while (battleShip.x == x_ && battleShip.y == y_) {
+            x_ = uint(keccak256(abi.encodePacked(block.timestamp, block.difficulty, msg.sender))) % widthGame;
+            y_ = uint(keccak256(abi.encodePacked(block.timestamp, block.difficulty, msg.sender))) % heightGame;
+        }
+        return(x_, y_);
     }
     
     function place(uint width, uint height) public override returns (uint, uint) {
