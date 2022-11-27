@@ -27,5 +27,8 @@ Implement a Touché Coulé from scratch in Solidity. The game is running into a 
 - Switch the account to play as a new player.
 - In each turn, we fire at a random address. 
 
+###Smart contract 
+One player can only have one destroyer and one battle ship. Each ship has similar variables: a data structure with horizontal and vertical coordinates, `widthGame` width and `heightGame` height of the canvas. 
+
 The picture below shows the interface of two players after they have registered 2 ships each.
 ![image](https://cdn.discordapp.com/attachments/1023913190532333668/1046469225126035486/image.png)
